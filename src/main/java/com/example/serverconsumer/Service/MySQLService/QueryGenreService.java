@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "MySQL-Service-Provider", url = "@{feign.MySQLUrl}/byGenre")
+@FeignClient(name = "mysql-QueryGenreService",url = "@{feign.MySQLUrl}/byGenre")
 public interface QueryGenreService {
     @PostMapping("/getGenres/{db_type}")
     List<String> getGenres(@PathVariable String db_type);

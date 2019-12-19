@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}/item")
+@FeignClient(name = "Neo4j-ItemQueryService",url = "${feign.Neo4jUrl}/item")
 public interface ItemQueryService {
     @GetMapping("/getRandomActors")
     String getRandomActors(@RequestParam Integer count);

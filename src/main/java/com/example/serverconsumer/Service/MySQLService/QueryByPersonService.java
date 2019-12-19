@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "MySQL-Service-Provider", url = "@{feign.MySQLUrl}/byPerson")
+@FeignClient(name = "mysql-QueryByPersonService",url = "@{feign.MySQLUrl}/byPerson")
 public interface QueryByPersonService {
     @PostMapping("/queryByActor/{db_type}")
      MovieResult queryByActor(@PathVariable String db_type, @RequestBody Person person);

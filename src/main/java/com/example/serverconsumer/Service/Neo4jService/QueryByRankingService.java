@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}/byRanking")
+@FeignClient(name = "Neo4j-QueryByRankingService",url = "${feign.Neo4jUrl}/byRanking")
 public interface QueryByRankingService {
     @GetMapping("/getMoviesRankingGreaterThan")
      String getMoviesRankingGreaterThan(@RequestParam("ranking")Float ranking,

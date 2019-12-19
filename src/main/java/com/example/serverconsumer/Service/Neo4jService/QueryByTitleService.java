@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}/byTitle")
+@FeignClient(name = "Neo4j-QueryByTitleService",url = "${feign.Neo4jUrl}/byTitle")
 public interface QueryByTitleService {
     @GetMapping("/getMoviesByTitle")
      String getMoviesByTitle(@RequestParam("title")String title);

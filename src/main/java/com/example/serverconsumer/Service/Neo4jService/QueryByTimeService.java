@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}/byTime")
+@FeignClient(name = "Neo4j-QueryByTimeService",url = "${feign.Neo4jUrl}/byTime")
 public interface QueryByTimeService {
     @GetMapping("/getMoviesByYear")
      String getMoviesByYear(@RequestParam("year")Integer year);

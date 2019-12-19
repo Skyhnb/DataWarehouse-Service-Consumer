@@ -1,6 +1,8 @@
 package com.example.serverconsumer.entity.MySQLEntiy;
 
-import com.tongji.zhou.moviedal.QueryEntity.MovieResultImp;
+
+
+import com.example.serverconsumer.entity.QueryEntity.MovieResultImp;
 
 import java.text.Collator;
 

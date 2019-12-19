@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "MySQL-Service-Provider", url = "@{feign.MySQLUrl}/byCorporation")
+@FeignClient(name = "mysql-QueryByCorporationService",url = "@{feign.MySQLUrl}/byCorporation")
 public interface QueryByCorporationService {
     @PostMapping("/byActors/{db_type}")
      List<Corporation> queryBetweenActor(@PathVariable String db_type, @RequestBody Range range);

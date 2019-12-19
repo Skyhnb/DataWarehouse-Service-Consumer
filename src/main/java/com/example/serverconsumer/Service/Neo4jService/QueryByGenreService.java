@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}/byGenre")
+@FeignClient(name = "Neo4j-QueryByGenreService",url = "${feign.Neo4jUrl}/byGenre")
 public interface QueryByGenreService {
     @GetMapping("/getMoviesByGenre")
     public String getMoviesByGenre(@RequestParam("genre")String genre, @RequestParam("startFrom")Integer startFrom, @RequestParam("limitation")Integer limitation);

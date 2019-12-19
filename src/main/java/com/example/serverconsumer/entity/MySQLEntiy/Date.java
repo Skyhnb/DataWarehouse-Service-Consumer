@@ -1,6 +1,7 @@
 package com.example.serverconsumer.entity.MySQLEntiy;
 
-import com.tongji.zhou.moviedal.QueryEntity.MovieResultImp;
+
+import com.example.serverconsumer.entity.QueryEntity.MovieResultImp;
 
 public class Date implements MovieResultImp {
     private Integer date_id;
