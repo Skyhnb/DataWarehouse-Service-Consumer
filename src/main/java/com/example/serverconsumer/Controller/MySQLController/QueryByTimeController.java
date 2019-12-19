@@ -3,11 +3,13 @@ package com.example.serverconsumer.Controller.MySQLController;
 import com.example.serverconsumer.Service.MySQLService.QueryByTimeService;
 import com.example.serverconsumer.entity.MySQLEntiy.Date;
 import com.example.serverconsumer.entity.QueryEntity.MovieResult;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
 @RestController
+@Api(tags = "mysql/byTime")
 @RequestMapping("/mysql/byTime")
 public class QueryByTimeController {
     @Resource

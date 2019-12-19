@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "mysql-QueryByTimeService",url = "@{feign.MySQLUrl}/byTime")
+@FeignClient(name = "mysql-QueryByTimeService",url = "${feign.MySQLUrl}/byTime")
 public interface QueryByTimeService {
     @PostMapping("queryByDate/{db_type}")
      MovieResult queryByTime(@PathVariable String db_type, @RequestBody Date condition);

@@ -1,6 +1,7 @@
 package com.example.serverconsumer.Controller.Neo4jControllers;
 
 import com.example.serverconsumer.Service.Neo4jService.IndicesService;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
+@Api(tags = "neo4j/indices")
 @RequestMapping("/neo4j/indices")
 public class IndicesController {
     @Resource

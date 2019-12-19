@@ -2,12 +2,14 @@ package com.example.serverconsumer.Controller.MySQLController;
 
 import com.example.serverconsumer.Service.MySQLService.QueryReviewService;
 import com.example.serverconsumer.entity.QueryEntity.UserReviewInfo;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
+@Api(tags = "mysql/byReview")
 @RequestMapping("/mysql/byReview")
 public class QueryReviewController {
     @Resource

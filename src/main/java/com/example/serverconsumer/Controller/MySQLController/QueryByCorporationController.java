@@ -3,12 +3,14 @@ package com.example.serverconsumer.Controller.MySQLController;
 import com.example.serverconsumer.Service.MySQLService.QueryByCorporationService;
 import com.example.serverconsumer.entity.MySQLEntiy.Corporation;
 import com.example.serverconsumer.entity.QueryEntity.Range;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
+@Api(tags = "mysql/byCorporation")
 @RequestMapping("/mysql/byCorporation")
 public class QueryByCorporationController {
     @Resource

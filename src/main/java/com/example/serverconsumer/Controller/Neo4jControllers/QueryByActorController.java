@@ -1,6 +1,7 @@
 package com.example.serverconsumer.Controller.Neo4jControllers;
 
 import com.example.serverconsumer.Service.Neo4jService.QueryByActorService;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
+@Api(tags = "neo4j/byActor")
 @RequestMapping("/neo4j/byActor")
 public class QueryByActorController {
 

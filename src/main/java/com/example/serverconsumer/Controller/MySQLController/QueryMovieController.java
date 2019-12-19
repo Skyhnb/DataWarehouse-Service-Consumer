@@ -4,13 +4,15 @@ import com.example.serverconsumer.Service.MySQLService.QueryMovieService;
 import com.example.serverconsumer.entity.MySQLEntiy.MovieFact;
 import com.example.serverconsumer.entity.MySQLEntiy.Product;
 import com.example.serverconsumer.entity.QueryEntity.PersonResult;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping("/mysql")
+@Api(tags = "mysql/byMovieName")
+@RequestMapping("/mysql/byMovieName")
 public class QueryMovieController {
     @Resource
     private QueryMovieService queryMovieService;

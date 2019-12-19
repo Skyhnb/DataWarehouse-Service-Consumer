@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "mysql-QueryReviewService",url = "@{feign.MySQLUrl}/byReview")
+@FeignClient(name = "mysql-QueryReviewService",url = "${feign.MySQLUrl}/byReview")
 public interface QueryReviewService {
     @PostMapping("/queryByMoodWithName/{db_type}")
     List<String> queryByMoodWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info);

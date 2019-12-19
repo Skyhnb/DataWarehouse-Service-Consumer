@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "mysql-QueryMovieService",url = "@{feign.MySQLUrl}/byMovieName")
+@FeignClient(name = "mysql-QueryMovieService",url = "${feign.MySQLUrl}/byMovieName")
 public interface QueryMovieService {
     @PostMapping("/queryProducts/{db_type}")
     List<Product> queryProducts(@RequestBody MovieFact movieFact, @PathVariable String db_type);
