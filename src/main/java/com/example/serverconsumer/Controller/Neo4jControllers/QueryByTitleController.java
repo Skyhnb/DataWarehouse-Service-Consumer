@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/byTitle")
+@RequestMapping("/neo4j/byTitle")
 public class QueryByTitleController {
 
     @Resource

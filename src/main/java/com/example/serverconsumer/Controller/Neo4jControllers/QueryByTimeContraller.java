@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/byTime")
+@RequestMapping("/neo4j/byTime")
 public class QueryByTimeContraller {
     @Resource
     private QueryByTimeService queryByTimeService;

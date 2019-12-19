@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/byCollaboration")
+@RequestMapping("/neo4j/byCollaboration")
 public class QueryByCollaborationController {
     @Resource
     private QueryByCollaborationService queryByCollaborationService;

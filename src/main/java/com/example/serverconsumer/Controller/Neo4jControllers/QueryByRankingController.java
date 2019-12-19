@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/byRanking")
+@RequestMapping("/neo4j/byRanking")
 public class QueryByRankingController {
     @Resource
     private QueryByRankingService queryByRankingService;

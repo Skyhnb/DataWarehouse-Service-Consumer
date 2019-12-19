@@ -1,0 +1,17 @@
+package com.example.serverconsumer.Service.MySQLService;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
+
+@FeignClient(name = "MySQL-Service-Provider", url = "@{feign.MySQLUrl}/byGenre")
+public interface QueryGenreService {
+    @PostMapping("/getGenres/{db_type}")
+    List<String> getGenres(@PathVariable String db_type);
+
+    @PostMapping("/queryMoviesByGenres/{db_type}")
+    List<String> queryMoviesByGenres(@PathVariable String db_type, @RequestBody List<String> genres);
+}
