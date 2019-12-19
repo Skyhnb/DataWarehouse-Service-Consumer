@@ -4,17 +4,14 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}")
+@FeignClient(name = "Neo4j-Service-Provider", url = "${feign.Neo4jUrl}/indices")
 public interface IndicesService {
 
-    @GetMapping("/getMovieAndReviewsByUserIdScoreGreaterThan")
-    public String getMovieAndReviewsByUserIdScoreGreaterThan(@RequestParam("userId")String userId, @RequestParam("score")Float score);
+    @GetMapping("/deleteIndices")
+    String deleteIndices();
 
-    @GetMapping("/getMovieAndReviewsByUserIdReviewScoreGreaterThanEqual")
-    public String getMovieAndReviewsByUserIdReviewScoreGreaterThanEqual(@RequestParam("userId")String userId, @RequestParam("score")Float score);
-
-    @GetMapping("/getMovieAndReviewsByUserIdReviewScoreLessThan")
-    public String getMovieAndReviewsByUserIdReviewScoreLessThan(@RequestParam("userId")String userId, @RequestParam("score")Float score);
+    @GetMapping("/createIndices")
+    public String createIndices();
 
 
 }

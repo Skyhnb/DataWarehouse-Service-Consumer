@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/my")
+@RequestMapping("/test")
 public class TestController {
     @Resource
     private Neo4jTest neo4jTest;
