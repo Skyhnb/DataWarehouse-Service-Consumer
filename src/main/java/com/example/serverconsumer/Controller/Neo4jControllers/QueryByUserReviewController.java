@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@Api(tags = "neo4j/byUserReview")
+@Api(tags = "按照用户评论查询（Neo4j）")
 @RequestMapping("neo4j/byUserReview")
 public class QueryByUserReviewController {
     @Resource

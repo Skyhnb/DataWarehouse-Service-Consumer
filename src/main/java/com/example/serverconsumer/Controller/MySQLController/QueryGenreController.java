@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@Api(tags = "mysql/byGenre")
+@Api(tags = "按照电影种类查询（MySQL）")
 @RequestMapping("/mysql/byGenre")
 public class QueryGenreController {
     @Resource

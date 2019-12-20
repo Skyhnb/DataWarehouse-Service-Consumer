@@ -10,8 +10,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@Api(tags = "mysql/byCorporation")
+@Api(tags = "按照演员关系查询（MySQL）")
 @RequestMapping("/mysql/byCorporation")
+
 public class QueryByCorporationController {
     @Resource
     private QueryByCorporationService queryByCorporationService;

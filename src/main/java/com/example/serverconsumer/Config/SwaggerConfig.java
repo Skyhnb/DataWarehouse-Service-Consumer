@@ -21,7 +21,7 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.example.serverconsumer.Controller"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(new ApiInfoBuilder()
-                        .title("Data Warehouse Project")
+                        .title("亚马逊电影")
                         .version("9.0")
                         .contact(new Contact("杨紫超","www.yzchnb.com","1021777674@qq.com"))
                         .build());

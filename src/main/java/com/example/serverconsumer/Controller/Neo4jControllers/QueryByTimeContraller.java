@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@Api(tags = "neo4j/byTime")
+@Api(tags = "按照时间查询（Neo4j）")
 @RequestMapping("/neo4j/byTime")
 public class QueryByTimeContraller {
     @Resource

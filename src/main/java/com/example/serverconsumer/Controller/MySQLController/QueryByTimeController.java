@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@Api(tags = "mysql/byTime")
+@Api(tags = "按照时间查询（MySQL）")
 @RequestMapping("/mysql/byTime")
 public class QueryByTimeController {
     @Resource

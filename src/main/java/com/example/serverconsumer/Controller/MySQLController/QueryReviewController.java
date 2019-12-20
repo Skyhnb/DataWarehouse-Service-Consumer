@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@Api(tags = "mysql/byReview")
+@Api(tags = "按照用户评分查询（MySQL）")
 @RequestMapping("/mysql/byReview")
 public class QueryReviewController {
     @Resource
