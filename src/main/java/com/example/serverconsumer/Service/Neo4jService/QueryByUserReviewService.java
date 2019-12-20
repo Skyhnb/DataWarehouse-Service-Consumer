@@ -6,24 +6,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name = "Neo4j-QueryByUserReviewService",url = "${feign.Neo4jUrl}/byUserReview")
 public interface QueryByUserReviewService {
-    @GetMapping("/getMovieAndReviewsByUserIdScoreGreaterThan")
-    public String getMovieAndReviewsByUserIdScoreGreaterThan(@RequestParam("userId")String userId, @RequestParam("score")Float score);
+    @GetMapping("/getMovieAndReviewsByUserNameReviewMood")
+     String getMovieAndReviewsByUserNameReviewMood(@RequestParam("userId")String userId, @RequestParam("mood")String mood);
 
-    @GetMapping("/getMovieAndReviewsByUserIdReviewScoreGreaterThanEqual")
-    public String getMovieAndReviewsByUserIdReviewScoreGreaterThanEqual(@RequestParam("userId")String userId, @RequestParam("score")Float score);
-
-    @GetMapping("/getMovieAndReviewsByUserIdReviewScoreLessThan")
-    public String getMovieAndReviewsByUserIdReviewScoreLessThan(@RequestParam("userId")String userId, @RequestParam("score")Float score);
-
-    @GetMapping("/getMovieAndReviewsByUserNameReviewScoreGreaterThanEqual")
-    public String getMovieAndReviewsByUserNameReviewScoreGreaterThanEqual(@RequestParam("userName")String userName, @RequestParam("score")Float score);
-
-    @GetMapping("/getMovieAndReviewsByUserNameReviewScoreLessThan")
-    public String getMovieAndReviewsByUserNameReviewScoreLessThan(@RequestParam("userName")String userName, @RequestParam("score")Float score);
-
-    @GetMapping("/getMovieAndReviewsByUserNameReviewScoreLessThanEqual")
-    public String getMovieAndReviewsByUserNameReviewScoreLessThanEqual(@RequestParam("userName")String userName, @RequestParam("score")Float score);
+    @GetMapping("/getMovieAndReviewsByUserIdReviewMood")
+     String getMovieAndReviewsByUserIdReviewMood(@RequestParam("userId")String userId, @RequestParam("mood")String mood);
 
     @GetMapping("/test")
-    public String test(@RequestParam Integer times) throws Exception;
+     String test(@RequestParam Integer times);
+
+    @GetMapping("/compareIndex")
+     String compareIndex(@RequestParam Integer times) throws Exception;
 }

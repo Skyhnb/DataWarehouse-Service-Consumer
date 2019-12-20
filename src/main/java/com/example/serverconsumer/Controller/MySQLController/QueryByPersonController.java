@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@Api(tags = "mysql//byPerson")
+@Api(tags = "mysql/byPerson")
 @RequestMapping("/mysql/byPerson")
 public class QueryByPersonController {
     @Resource
