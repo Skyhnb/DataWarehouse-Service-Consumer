@@ -1,9 +1,12 @@
 package com.example.serverconsumer.entity.QueryEntity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MovieResult implements MovieResultImp {
     private String movies;
     private Integer count;
-    public MovieResult(String movies, Integer count){
+    public MovieResult(String movies,Integer count){
         this.movies=movies;
         this.count=count;
     }
@@ -15,7 +18,19 @@ public class MovieResult implements MovieResultImp {
 
     @Override
     public String getMovies() {
-        return movies;
+
+        return null;
+    }
+
+    public List<String> getMovieList(){
+        String[] movie_list= movies.split("\\|");
+        List<String> re=new ArrayList<>();
+        for(String i:movie_list){
+            if(!i.equals("")){
+                re.add(i);
+            }
+        }
+        return re;
     }
 
     public void setCount(Integer count) {
@@ -26,3 +41,4 @@ public class MovieResult implements MovieResultImp {
         this.movies = movies;
     }
 }
+

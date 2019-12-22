@@ -17,8 +17,8 @@ public class QueryByUserReviewController {
     private QueryByUserReviewService queryByUserReviewService;
 
     @GetMapping("/getMovieAndReviewsByUserNameReviewMood")
-    public String getMovieAndReviewsByUserNameReviewMood(@RequestParam("userId")String userId, @RequestParam("mood")String mood){
-        return queryByUserReviewService.getMovieAndReviewsByUserNameReviewMood(userId, mood);
+    public String getMovieAndReviewsByUserNameReviewMood(@RequestParam("userName")String userName, @RequestParam("mood")String mood){
+        return queryByUserReviewService.getMovieAndReviewsByUserNameReviewMood(userName, mood);
     }
 
     @GetMapping("/getMovieAndReviewsByUserIdReviewMood")
