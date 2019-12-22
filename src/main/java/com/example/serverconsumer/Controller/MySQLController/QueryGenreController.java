@@ -17,13 +17,13 @@ public class QueryGenreController {
 
     @ApiOperation(value = "获取电影类别")
     @PostMapping("/getGenres/{db_type}")
-    public List<String> getGenres(@PathVariable String db_type){
+    public String getGenres(@PathVariable String db_type){
         return queryGenreService.getGenres(db_type);
     }
 
     @ApiOperation(value = "根据电影类别查询")
     @PostMapping("/queryMoviesByGenres/{db_type}")
-    public List<String> queryMoviesByGenres(@PathVariable String db_type, @RequestBody List<String> genres){
+    public String queryMoviesByGenres(@PathVariable String db_type, @RequestBody List<String> genres){
         return queryGenreService.queryMoviesByGenres(db_type, genres);
     }
 }

@@ -20,13 +20,13 @@ public class QueryByCorporationController {
 
     @ApiOperation(value="根据演员查询")
     @PostMapping("/byActors/{db_type}")
-    public List<Corporation> queryBetweenActor(@PathVariable String db_type, @RequestBody Range range){
+    public String queryBetweenActor(@PathVariable String db_type, @RequestBody Range range){
         return queryByCorporationService.queryBetweenActor(db_type, range);
     }
 
     @ApiOperation(value = "根据演员，导演查询")
     @PostMapping("/byActorAndDirector/{db_type}")
-    public List<Corporation> byActorAndDirector(@PathVariable String db_type, @RequestBody Range range){
+    public String byActorAndDirector(@PathVariable String db_type, @RequestBody Range range){
         return queryByCorporationService.byActorAndDirector(db_type, range);
     }
 }

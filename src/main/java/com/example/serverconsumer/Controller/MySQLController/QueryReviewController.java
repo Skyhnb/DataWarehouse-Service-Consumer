@@ -18,25 +18,25 @@ public class QueryReviewController {
 
     @ApiOperation(value="根据用户名，情感查询")
     @PostMapping("/queryByMoodWithName/{db_type}")
-    public List<String> queryByMoodWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info){
+    public String queryByMoodWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info){
         return queryReviewService.queryByMoodWithName(db_type, info);
     }
 
     @ApiOperation(value="根据用户ID，情感查询")
     @PostMapping("/queryByMoodWithId/{db_type}")
-    public List<String> queryByMoodWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info){
+    public String queryByMoodWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info){
         return queryReviewService.queryByMoodWithId(db_type, info);
     }
 
     @ApiOperation(value="根据用户名，评分查询")
     @PostMapping("/queryByScoreWithName/{db_type}")
-    public List<String> queryByScoreWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info){
+    public String queryByScoreWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info){
         return queryReviewService.queryByScoreWithName(db_type, info);
     }
 
     @ApiOperation(value="根据用户ID，评分查询")
     @PostMapping("/queryByScoreWithId/{db_type}")
-    public List<String> queryByScoreWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info){
+    public String queryByScoreWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info){
         return queryReviewService.queryByScoreWithId(db_type, info);
     }
 }

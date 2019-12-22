@@ -19,31 +19,31 @@ public class QueryByPersonController {
 
     @ApiOperation(value = "根据演员查询")
     @PostMapping("/queryByActor/{db_type}")
-    public MovieResult queryByActor(@PathVariable String db_type, @RequestBody Person person){
+    public String queryByActor(@PathVariable String db_type, @RequestBody Person person){
         return queryByPersonService.queryByActor(db_type, person);
     }
 
     @ApiOperation(value = "根据演员（join）查询")
     @PostMapping("/queryByActorWithJoin/{db_type}")
-    public List<String> queryByActorWithJoin(@PathVariable String db_type, @RequestBody Person person){
+    public String queryByActorWithJoin(@PathVariable String db_type, @RequestBody Person person){
         return queryByPersonService.queryByActorWithJoin(db_type, person);
     }
 
     @ApiOperation(value = "根据配角查询")
     @PostMapping("/queryBySupporting/{db_type}")
-    public MovieResult queryBySupporting(@PathVariable String db_type,@RequestBody Person person){
+    public String queryBySupporting(@PathVariable String db_type,@RequestBody Person person){
         return queryByPersonService.queryBySupporting(db_type, person);
     }
 
     @ApiOperation(value = "根据主演查询")
     @PostMapping("/queryByStarring/{db_type}")
-    public MovieResult queryByStarring(@PathVariable String db_type,@RequestBody Person person){
+    public String queryByStarring(@PathVariable String db_type,@RequestBody Person person){
         return queryByPersonService.queryByStarring(db_type, person);
     }
 
     @ApiOperation(value = "根据导演查询")
     @PostMapping("/queryByDirector/{db_type}")
-    public MovieResult queryByDirector(@PathVariable String db_type,@RequestBody Person person){
+    public String queryByDirector(@PathVariable String db_type,@RequestBody Person person){
         return queryByPersonService.queryByDirector(db_type, person);
     }
 }

@@ -16,7 +16,7 @@ public class QueryCombinationController {
     private QueryCombinationService queryCombinationService;
 
     @PostMapping("/queryWithGenreAndActor/{db_type}")
-   public List<String> queryWithGenreAndActor(@PathVariable String db_type, @RequestBody UserWithGenre user){
+   public String queryWithGenreAndActor(@PathVariable String db_type, @RequestBody UserWithGenre user){
         return queryCombinationService.queryWithGenreAndActor(db_type, user);
     }
 

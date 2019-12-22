@@ -18,13 +18,13 @@ public class QueryByTimeController {
 
     @ApiOperation(value = "按照日期查询")
     @PostMapping("queryByDate/{db_type}")
-    public MovieResult queryByTime(@PathVariable String db_type, @RequestBody Date condition){
+    public String queryByTime(@PathVariable String db_type, @RequestBody Date condition){
         return queryByTimeService.queryByTime(db_type, condition);
     }
 
     @ApiOperation(value = "按照季度查询")
     @PostMapping("queryBySeason/{db_type}")
-    public MovieResult queryBySeason(@PathVariable String db_type, @RequestBody Date condition){
+    public String queryBySeason(@PathVariable String db_type, @RequestBody Date condition){
         return queryByTimeService.queryBySeason(db_type, condition);
     }
 

@@ -11,5 +11,5 @@ import java.util.List;
 @FeignClient(name = "mysql-QueryCombinationService", url = "${feign.MySQLUrl}/byCombination")
 public interface QueryCombinationService {
     @PostMapping("/queryWithGenreAndActor/{db_type}")
-    List<String> queryWithGenreAndActor(@PathVariable String db_type, @RequestBody UserWithGenre user);
+    String queryWithGenreAndActor(@PathVariable String db_type, @RequestBody UserWithGenre user);
 }

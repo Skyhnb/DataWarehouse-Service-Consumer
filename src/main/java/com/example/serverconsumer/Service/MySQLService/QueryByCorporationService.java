@@ -12,9 +12,9 @@ import java.util.List;
 @FeignClient(name = "mysql-QueryByCorporationService",url = "${feign.MySQLUrl}/byCorporation")
 public interface QueryByCorporationService {
     @PostMapping("/byActors/{db_type}")
-     List<Corporation> queryBetweenActor(@PathVariable String db_type, @RequestBody Range range);
+    String queryBetweenActor(@PathVariable String db_type, @RequestBody Range range);
 
     @PostMapping("/byActorAndDirector/{db_type}")
-     List<Corporation> byActorAndDirector(@PathVariable String db_type, @RequestBody Range range);
+    String byActorAndDirector(@PathVariable String db_type, @RequestBody Range range);
 
 }

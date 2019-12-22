@@ -12,17 +12,17 @@ import java.util.List;
 @FeignClient(name = "mysql-QueryByPersonService",url = "${feign.MySQLUrl}/byPerson")
 public interface QueryByPersonService {
     @PostMapping("/queryByActor/{db_type}")
-     MovieResult queryByActor(@PathVariable String db_type, @RequestBody Person person);
+    String queryByActor(@PathVariable String db_type, @RequestBody Person person);
 
     @PostMapping("/queryByActorWithJoin/{db_type}")
-     List<String> queryByActorWithJoin(@PathVariable String db_type, @RequestBody Person person);
+    String queryByActorWithJoin(@PathVariable String db_type, @RequestBody Person person);
 
     @PostMapping("/queryBySupporting/{db_type}")
-     MovieResult queryBySupporting(@PathVariable String db_type,@RequestBody Person person);
+    String queryBySupporting(@PathVariable String db_type,@RequestBody Person person);
 
     @PostMapping("/queryByStarring/{db_type}")
-    MovieResult queryByStarring(@PathVariable String db_type,@RequestBody Person person);
+    String queryByStarring(@PathVariable String db_type,@RequestBody Person person);
 
     @PostMapping("/queryByDirector/{db_type}")
-    MovieResult queryByDirector(@PathVariable String db_type,@RequestBody Person person);
+    String queryByDirector(@PathVariable String db_type,@RequestBody Person person);
 }

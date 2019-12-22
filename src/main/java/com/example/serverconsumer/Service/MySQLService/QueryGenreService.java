@@ -10,8 +10,8 @@ import java.util.List;
 @FeignClient(name = "mysql-QueryGenreService",url = "${feign.MySQLUrl}/byGenre")
 public interface QueryGenreService {
     @PostMapping("/getGenres/{db_type}")
-    List<String> getGenres(@PathVariable String db_type);
+    String getGenres(@PathVariable String db_type);
 
     @PostMapping("/queryMoviesByGenres/{db_type}")
-    List<String> queryMoviesByGenres(@PathVariable String db_type, @RequestBody List<String> genres);
+    String queryMoviesByGenres(@PathVariable String db_type, @RequestBody List<String> genres);
 }

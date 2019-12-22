@@ -11,15 +11,15 @@ import java.util.List;
 @FeignClient(name = "mysql-QueryReviewService",url = "${feign.MySQLUrl}/byReview")
 public interface QueryReviewService {
     @PostMapping("/queryByMoodWithName/{db_type}")
-    List<String> queryByMoodWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info);
+    String queryByMoodWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info);
 
     @PostMapping("/queryByMoodWithId/{db_type}")
-    List<String> queryByMoodWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info);
+    String queryByMoodWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info);
 
     @PostMapping("/queryByScoreWithName/{db_type}")
-    List<String> queryByScoreWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info);
+    String queryByScoreWithName(@PathVariable String db_type, @RequestBody UserReviewInfo info);
 
     @PostMapping("/queryByScoreWithId/{db_type}")
-    List<String> queryByScoreWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info);
+    String queryByScoreWithId(@PathVariable String db_type, @RequestBody UserReviewInfo info);
 
 }

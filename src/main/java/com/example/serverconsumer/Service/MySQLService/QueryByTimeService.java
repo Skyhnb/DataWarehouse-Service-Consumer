@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "mysql-QueryByTimeService",url = "${feign.MySQLUrl}/byTime")
 public interface QueryByTimeService {
     @PostMapping("queryByDate/{db_type}")
-     MovieResult queryByTime(@PathVariable String db_type, @RequestBody Date condition);
+    String queryByTime(@PathVariable String db_type, @RequestBody Date condition);
 
     @PostMapping("queryBySeason/{db_type}")
-     MovieResult queryBySeason(@PathVariable String db_type, @RequestBody Date condition);
+    String queryBySeason(@PathVariable String db_type, @RequestBody Date condition);
 
 }
