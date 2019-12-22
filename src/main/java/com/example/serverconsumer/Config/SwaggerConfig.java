@@ -17,6 +17,7 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .pathMapping("/")
+                .groupName("查询")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.serverconsumer.Controller"))
                 .paths(PathSelectors.any())
